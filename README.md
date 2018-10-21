@@ -24,4 +24,10 @@ This is Full Stack implementation for simple calculator
   * 4+5+7*3-4
   * 3/3+3*-5-7*9
  
+## REST API for calculation
+  * https://documenter.getpostman.com/view/700752/RWguxHC2
+
+## APPLICATION
+  * https://simplecalculator-9f8b3.firebaseapp.com/
+ 
  
