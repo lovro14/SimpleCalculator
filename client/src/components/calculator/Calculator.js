@@ -21,7 +21,13 @@ class Calculator extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
-      this.setState({ errors: nextProps.errors, inputContent: "" });
+      this.setState({
+        errors: nextProps.errors,
+        inputContent: "",
+        lastOperator: "",
+        minusStart: false,
+        negativeOperand: false
+      });
     }
     if (nextProps.mathOperation.result) {
       this.setState({
@@ -59,8 +65,10 @@ class Calculator extends Component {
     } else if (
       (this.state.lastOperator === "*" || this.state.lastOperator === "/") &
       (operator === "-") &
-      !this.state.negativeOperand
+      !this.state.negativeOperand &
+      isNaN(this.state.inputContent.slice(-1))
     ) {
+      console.log("tu sam");
       this.setState(prevState => {
         return {
           negativeOperand: true,
@@ -129,7 +137,9 @@ class Calculator extends Component {
     this.setState({
       inputContent: "",
       operatorPressed: false,
-      error: {}
+      error: {},
+      lastOperator: "",
+      negativeOperand: false
     });
   };
 
