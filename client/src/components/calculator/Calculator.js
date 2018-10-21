@@ -68,7 +68,6 @@ class Calculator extends Component {
       !this.state.negativeOperand &
       isNaN(this.state.inputContent.slice(-1))
     ) {
-      console.log("tu sam");
       this.setState(prevState => {
         return {
           negativeOperand: true,
