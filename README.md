@@ -27,7 +27,7 @@ This is Full Stack implementation for simple calculator
 ## REST API for calculation
   * https://documenter.getpostman.com/view/700752/RWguxHC2
 
-## APPLICATION
+## Application
   * https://simplecalculator-9f8b3.firebaseapp.com/
  
  
